@@ -21,6 +21,7 @@ typedef struct list_s
 typedef struct shdata_s
 {
 	char **args;
+	char **argvs;
 	list_t *sh_env;
 	int ps_count;
 	int status;
@@ -69,6 +70,7 @@ char *_getenv(const char *, char **);
 char *check_exe(char *, list_t *);
 void print_path(void);
 void print_list(list_t *);
+void print_errors(shdata_t *);
 list_t *path_list();
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 void shell_exit(int status, int args, char **argv);
