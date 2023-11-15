@@ -12,7 +12,7 @@ void print_errors(shdata_t *data)
 	char *ps;
 	int i, length;
 
-	filename = _strdup(data->argvs[0]);
+	filename = _strdup(data->args[0]);
 	command = _strdup(data->args[0]);
 	ps = _strdup(itos(data->ps_count));
 
